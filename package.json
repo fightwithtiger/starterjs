@@ -1,17 +1,34 @@
 {
   "name": "starterjs",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fightwithtiger",
+  "bugs": {
+    "url": "https://github.com/fightwithtiger/"
+  },
+  "license": "MIT",
+  "author": "deng_tuo <2284925818@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fightwithtiger/"
+  },
+  "funding": "https://github.com/fightwithtiger",
   "description": "",
+  "keywords": [],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "rimraf dist && rollup -c -w",
-    "build:wx": "cross-env NODE_ENV=wx rimraf dist && rollup -c",
-    "build:tt": "cross-env NODE_ENV=tt rimraf dist && rollup -c"
+    "build": "rimraf dist && rollup -c"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/plugin-external-helpers": "^7.16.7",
@@ -23,13 +40,7 @@
     "@rollup/plugin-commonjs": "^21.0.3",
     "@rollup/plugin-node-resolve": "^13.2.0",
     "cross-env": "^7.0.3",
-    "esno": "^0.14.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.70.1",
-    "rollup-plugin-dts": "^4.2.1",
-    "vite": "^2.9.5"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.1"
+    "rollup": "^2.70.1"
   }
 }

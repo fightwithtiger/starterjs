@@ -10,7 +10,6 @@ const resolve = (...args) => path.resolve(...args);
 
 const config = [
   {
-    // 编译typescript, 生成 js 文件
     input: resolve('./src/index.js'),
     output: [
       {
@@ -18,11 +17,11 @@ const config = [
         format: 'es',
         name: 'starter',
       },
-      // {
-      //   file: resolve('./', pkg.main),
-      //   format: 'cjs',
-      //   name: 'starter',
-      // },
+      {
+        file: resolve('./', pkg.main),
+        format: 'cjs',
+        name: 'starter',
+      },
     ],
     plugins: [
       commonjs(),
