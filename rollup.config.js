@@ -25,6 +25,8 @@ const config = [
       commonjs(),
       babel({
         extensions,
+        exclude: 'node_modules/**',
+        babelHelpers: 'bundled'
       }),
       nodeResolve({
         extensions,
