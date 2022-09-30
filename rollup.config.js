@@ -15,12 +15,10 @@ const config = [
       {
         file: resolve('./', pkg.module),
         format: 'es',
-        name: 'starter',
       },
       {
         file: resolve('./', pkg.main),
         format: 'cjs',
-        name: 'starter',
       },
     ],
     plugins: [
@@ -32,6 +30,7 @@ const config = [
         extensions,
       }),
     ],
+    external: [/node_modules/],
   },
 ];
 
